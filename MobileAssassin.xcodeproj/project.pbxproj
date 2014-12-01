@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		777EA00F1A27C3F600100B31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA00E1A27C3F600100B31 /* main.m */; };
+		777EA0121A27C3F600100B31 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA0111A27C3F600100B31 /* AppDelegate.m */; };
+		777EA0151A27C3F600100B31 /* MobileAssassin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 777EA0131A27C3F600100B31 /* MobileAssassin.xcdatamodeld */; };
+		777EA01B1A27C3F600100B31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 777EA0191A27C3F600100B31 /* Main.storyboard */; };
+		777EA01D1A27C3F600100B31 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 777EA01C1A27C3F600100B31 /* Images.xcassets */; };
+		777EA0201A27C3F600100B31 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 777EA01E1A27C3F600100B31 /* LaunchScreen.xib */; };
+		777EA02C1A27C3F600100B31 /* MobileAssassinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA02B1A27C3F600100B31 /* MobileAssassinTests.m */; };
+		777EA0361A27CACB00100B31 /* Ninja-iPhone-5-Wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 777EA0351A27CACB00100B31 /* Ninja-iPhone-5-Wallpaper.jpg */; };
+		777EA03A1A2AABAC00100B31 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA0391A2AABAC00100B31 /* MainMenuViewController.m */; };
+		777EA03E1A2AAC1B00100B31 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA03D1A2AAC1B00100B31 /* LoginViewController.m */; };
+		777EA0431A2AAC3D00100B31 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA0421A2AAC3D00100B31 /* SignupViewController.m */; };
+		777EA0461A2AAC5300100B31 /* CreateGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA0451A2AAC5300100B31 /* CreateGameViewController.m */; };
+		777EA0491A2AAC6C00100B31 /* OpenGamesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA0481A2AAC6C00100B31 /* OpenGamesTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		777EA0261A27C3F600100B31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 777EA0011A27C3F600100B31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 777EA0081A27C3F600100B31;
+			remoteInfo = MobileAssassin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		777EA0091A27C3F600100B31 /* MobileAssassin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAssassin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		777EA00D1A27C3F600100B31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		777EA00E1A27C3F600100B31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		777EA0101A27C3F600100B31 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		777EA0111A27C3F600100B31 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		777EA0141A27C3F600100B31 /* MobileAssassin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MobileAssassin.xcdatamodel; sourceTree = "<group>"; };
+		777EA01A1A27C3F600100B31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		777EA01C1A27C3F600100B31 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		777EA01F1A27C3F600100B31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		777EA0251A27C3F600100B31 /* MobileAssassinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileAssassinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		777EA02A1A27C3F600100B31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		777EA02B1A27C3F600100B31 /* MobileAssassinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileAssassinTests.m; sourceTree = "<group>"; };
+		777EA0351A27CACB00100B31 /* Ninja-iPhone-5-Wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Ninja-iPhone-5-Wallpaper.jpg"; path = "../../../../Downloads/Ninja-iPhone-5-Wallpaper.jpg"; sourceTree = "<group>"; };
+		777EA0381A2AABAC00100B31 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		777EA0391A2AABAC00100B31 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		777EA03C1A2AAC1B00100B31 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		777EA03D1A2AAC1B00100B31 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		777EA0411A2AAC3D00100B31 /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
+		777EA0421A2AAC3D00100B31 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
+		777EA0441A2AAC5300100B31 /* CreateGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateGameViewController.h; sourceTree = "<group>"; };
+		777EA0451A2AAC5300100B31 /* CreateGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateGameViewController.m; sourceTree = "<group>"; };
+		777EA0471A2AAC6C00100B31 /* OpenGamesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGamesTableViewController.h; sourceTree = "<group>"; };
+		777EA0481A2AAC6C00100B31 /* OpenGamesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGamesTableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		777EA0061A27C3F600100B31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		777EA0221A27C3F600100B31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		777EA0001A27C3F600100B31 = {
+			isa = PBXGroup;
+			children = (
+				777EA00B1A27C3F600100B31 /* MobileAssassin */,
+				777EA0281A27C3F600100B31 /* MobileAssassinTests */,
+				777EA00A1A27C3F600100B31 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		777EA00A1A27C3F600100B31 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				777EA0091A27C3F600100B31 /* MobileAssassin.app */,
+				777EA0251A27C3F600100B31 /* MobileAssassinTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		777EA00B1A27C3F600100B31 /* MobileAssassin */ = {
+			isa = PBXGroup;
+			children = (
+				777EA0101A27C3F600100B31 /* AppDelegate.h */,
+				777EA0111A27C3F600100B31 /* AppDelegate.m */,
+				777EA0191A27C3F600100B31 /* Main.storyboard */,
+				777EA0371A2AAB8500100B31 /* Controllers */,
+				777EA01C1A27C3F600100B31 /* Images.xcassets */,
+				777EA01E1A27C3F600100B31 /* LaunchScreen.xib */,
+				777EA0131A27C3F600100B31 /* MobileAssassin.xcdatamodeld */,
+				777EA00C1A27C3F600100B31 /* Supporting Files */,
+			);
+			path = MobileAssassin;
+			sourceTree = "<group>";
+		};
+		777EA00C1A27C3F600100B31 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				777EA0351A27CACB00100B31 /* Ninja-iPhone-5-Wallpaper.jpg */,
+				777EA00D1A27C3F600100B31 /* Info.plist */,
+				777EA00E1A27C3F600100B31 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		777EA0281A27C3F600100B31 /* MobileAssassinTests */ = {
+			isa = PBXGroup;
+			children = (
+				777EA02B1A27C3F600100B31 /* MobileAssassinTests.m */,
+				777EA0291A27C3F600100B31 /* Supporting Files */,
+			);
+			path = MobileAssassinTests;
+			sourceTree = "<group>";
+		};
+		777EA0291A27C3F600100B31 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				777EA02A1A27C3F600100B31 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		777EA0371A2AAB8500100B31 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				777EA03B1A2AAC0600100B31 /* UserCredentials */,
+				777EA0381A2AABAC00100B31 /* MainMenuViewController.h */,
+				777EA0391A2AABAC00100B31 /* MainMenuViewController.m */,
+				777EA0441A2AAC5300100B31 /* CreateGameViewController.h */,
+				777EA0451A2AAC5300100B31 /* CreateGameViewController.m */,
+				777EA0471A2AAC6C00100B31 /* OpenGamesTableViewController.h */,
+				777EA0481A2AAC6C00100B31 /* OpenGamesTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		777EA03B1A2AAC0600100B31 /* UserCredentials */ = {
+			isa = PBXGroup;
+			children = (
+				777EA03C1A2AAC1B00100B31 /* LoginViewController.h */,
+				777EA03D1A2AAC1B00100B31 /* LoginViewController.m */,
+				777EA0411A2AAC3D00100B31 /* SignupViewController.h */,
+				777EA0421A2AAC3D00100B31 /* SignupViewController.m */,
+			);
+			name = UserCredentials;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		777EA0081A27C3F600100B31 /* MobileAssassin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 777EA02F1A27C3F600100B31 /* Build configuration list for PBXNativeTarget "MobileAssassin" */;
+			buildPhases = (
+				777EA0051A27C3F600100B31 /* Sources */,
+				777EA0061A27C3F600100B31 /* Frameworks */,
+				777EA0071A27C3F600100B31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MobileAssassin;
+			productName = MobileAssassin;
+			productReference = 777EA0091A27C3F600100B31 /* MobileAssassin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		777EA0241A27C3F600100B31 /* MobileAssassinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 777EA0321A27C3F600100B31 /* Build configuration list for PBXNativeTarget "MobileAssassinTests" */;
+			buildPhases = (
+				777EA0211A27C3F600100B31 /* Sources */,
+				777EA0221A27C3F600100B31 /* Frameworks */,
+				777EA0231A27C3F600100B31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				777EA0271A27C3F600100B31 /* PBXTargetDependency */,
+			);
+			name = MobileAssassinTests;
+			productName = MobileAssassinTests;
+			productReference = 777EA0251A27C3F600100B31 /* MobileAssassinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		777EA0011A27C3F600100B31 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Enrique Jose Padilla";
+				TargetAttributes = {
+					777EA0081A27C3F600100B31 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					777EA0241A27C3F600100B31 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 777EA0081A27C3F600100B31;
+					};
+				};
+			};
+			buildConfigurationList = 777EA0041A27C3F600100B31 /* Build configuration list for PBXProject "MobileAssassin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 777EA0001A27C3F600100B31;
+			productRefGroup = 777EA00A1A27C3F600100B31 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				777EA0081A27C3F600100B31 /* MobileAssassin */,
+				777EA0241A27C3F600100B31 /* MobileAssassinTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		777EA0071A27C3F600100B31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				777EA01B1A27C3F600100B31 /* Main.storyboard in Resources */,
+				777EA0201A27C3F600100B31 /* LaunchScreen.xib in Resources */,
+				777EA0361A27CACB00100B31 /* Ninja-iPhone-5-Wallpaper.jpg in Resources */,
+				777EA01D1A27C3F600100B31 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		777EA0231A27C3F600100B31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		777EA0051A27C3F600100B31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				777EA0121A27C3F600100B31 /* AppDelegate.m in Sources */,
+				777EA00F1A27C3F600100B31 /* main.m in Sources */,
+				777EA0461A2AAC5300100B31 /* CreateGameViewController.m in Sources */,
+				777EA03E1A2AAC1B00100B31 /* LoginViewController.m in Sources */,
+				777EA0491A2AAC6C00100B31 /* OpenGamesTableViewController.m in Sources */,
+				777EA0151A27C3F600100B31 /* MobileAssassin.xcdatamodeld in Sources */,
+				777EA0431A2AAC3D00100B31 /* SignupViewController.m in Sources */,
+				777EA03A1A2AABAC00100B31 /* MainMenuViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		777EA0211A27C3F600100B31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				777EA02C1A27C3F600100B31 /* MobileAssassinTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		777EA0271A27C3F600100B31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 777EA0081A27C3F600100B31 /* MobileAssassin */;
+			targetProxy = 777EA0261A27C3F600100B31 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		777EA0191A27C3F600100B31 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				777EA01A1A27C3F600100B31 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		777EA01E1A27C3F600100B31 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				777EA01F1A27C3F600100B31 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		777EA02D1A27C3F600100B31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		777EA02E1A27C3F600100B31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		777EA0301A27C3F600100B31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MobileAssassin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		777EA0311A27C3F600100B31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MobileAssassin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		777EA0331A27C3F600100B31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MobileAssassinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileAssassin.app/MobileAssassin";
+			};
+			name = Debug;
+		};
+		777EA0341A27C3F600100B31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MobileAssassinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileAssassin.app/MobileAssassin";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		777EA0041A27C3F600100B31 /* Build configuration list for PBXProject "MobileAssassin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				777EA02D1A27C3F600100B31 /* Debug */,
+				777EA02E1A27C3F600100B31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		777EA02F1A27C3F600100B31 /* Build configuration list for PBXNativeTarget "MobileAssassin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				777EA0301A27C3F600100B31 /* Debug */,
+				777EA0311A27C3F600100B31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		777EA0321A27C3F600100B31 /* Build configuration list for PBXNativeTarget "MobileAssassinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				777EA0331A27C3F600100B31 /* Debug */,
+				777EA0341A27C3F600100B31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		777EA0131A27C3F600100B31 /* MobileAssassin.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				777EA0141A27C3F600100B31 /* MobileAssassin.xcdatamodel */,
+			);
+			currentVersion = 777EA0141A27C3F600100B31 /* MobileAssassin.xcdatamodel */;
+			path = MobileAssassin.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 777EA0011A27C3F600100B31 /* Project object */;
+}
