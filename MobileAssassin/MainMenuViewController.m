@@ -21,11 +21,19 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     self.currentUser = [PFUser currentUser];
+    NSLog(self.currentUser.username);
     if (self.currentUser) {
-        if (![self.currentUser objectForKey:@"isPlaying"]) {
+           BOOL isPlaying = [[self.currentUser objectForKey:@"isPlaying"] boolValue];
+        NSLog(isPlaying ? @"Yes" : @"No");
+        if (!isPlaying) {
+            NSLog(@"Entering the if isplaying");
             self.assassinateButton.hidden = YES;
             self.separatorLabel.hidden = YES;
             [self.gamesButton setTitle:@"Search for Lobby" forState:(UIControlStateNormal)];
+        } else {
+            self.assassinateButton.hidden = NO;
+            self.separatorLabel.hidden = NO;
+            [self.gamesButton setTitle:@"View Current Game" forState:(UIControlStateNormal)];
         }
     } else {
         [self performSegueWithIdentifier:@"showLogin" sender:self];
