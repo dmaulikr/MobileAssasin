@@ -20,6 +20,20 @@
 		777EA0431A2AAC3D00100B31 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA0421A2AAC3D00100B31 /* SignupViewController.m */; };
 		777EA0461A2AAC5300100B31 /* CreateGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA0451A2AAC5300100B31 /* CreateGameViewController.m */; };
 		777EA0491A2AAC6C00100B31 /* OpenGamesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA0481A2AAC6C00100B31 /* OpenGamesTableViewController.m */; };
+		77C951051A2FFC0000457117 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C951011A2FFC0000457117 /* Bolts.framework */; };
+		77C951061A2FFC0000457117 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C951021A2FFC0000457117 /* Parse.framework */; };
+		77C951071A2FFC0000457117 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C951031A2FFC0000457117 /* ParseFacebookUtils.framework */; };
+		77C951081A2FFC0000457117 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C951041A2FFC0000457117 /* ParseUI.framework */; };
+		77C951131A2FFC5100457117 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C951091A2FFC5100457117 /* AudioToolbox.framework */; };
+		77C951141A2FFC5100457117 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C9510A1A2FFC5100457117 /* CFNetwork.framework */; };
+		77C951151A2FFC5100457117 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C9510B1A2FFC5100457117 /* CoreGraphics.framework */; };
+		77C951161A2FFC5100457117 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C9510C1A2FFC5100457117 /* CoreLocation.framework */; };
+		77C951171A2FFC5100457117 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C9510D1A2FFC5100457117 /* libz.dylib */; };
+		77C951181A2FFC5100457117 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C9510E1A2FFC5100457117 /* MobileCoreServices.framework */; };
+		77C951191A2FFC5100457117 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C9510F1A2FFC5100457117 /* QuartzCore.framework */; };
+		77C9511A1A2FFC5100457117 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C951101A2FFC5100457117 /* Security.framework */; };
+		77C9511B1A2FFC5100457117 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C951111A2FFC5100457117 /* StoreKit.framework */; };
+		77C9511C1A2FFC5100457117 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C951121A2FFC5100457117 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +70,20 @@
 		777EA0451A2AAC5300100B31 /* CreateGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateGameViewController.m; sourceTree = "<group>"; };
 		777EA0471A2AAC6C00100B31 /* OpenGamesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGamesTableViewController.h; sourceTree = "<group>"; };
 		777EA0481A2AAC6C00100B31 /* OpenGamesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGamesTableViewController.m; sourceTree = "<group>"; };
+		77C951011A2FFC0000457117 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		77C951021A2FFC0000457117 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		77C951031A2FFC0000457117 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		77C951041A2FFC0000457117 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		77C951091A2FFC5100457117 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		77C9510A1A2FFC5100457117 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		77C9510B1A2FFC5100457117 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		77C9510C1A2FFC5100457117 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		77C9510D1A2FFC5100457117 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		77C9510E1A2FFC5100457117 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		77C9510F1A2FFC5100457117 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		77C951101A2FFC5100457117 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		77C951111A2FFC5100457117 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		77C951121A2FFC5100457117 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +91,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77C951131A2FFC5100457117 /* AudioToolbox.framework in Frameworks */,
+				77C951141A2FFC5100457117 /* CFNetwork.framework in Frameworks */,
+				77C951151A2FFC5100457117 /* CoreGraphics.framework in Frameworks */,
+				77C951161A2FFC5100457117 /* CoreLocation.framework in Frameworks */,
+				77C951171A2FFC5100457117 /* libz.dylib in Frameworks */,
+				77C951181A2FFC5100457117 /* MobileCoreServices.framework in Frameworks */,
+				77C951191A2FFC5100457117 /* QuartzCore.framework in Frameworks */,
+				77C9511A1A2FFC5100457117 /* Security.framework in Frameworks */,
+				77C9511B1A2FFC5100457117 /* StoreKit.framework in Frameworks */,
+				77C9511C1A2FFC5100457117 /* SystemConfiguration.framework in Frameworks */,
+				77C951061A2FFC0000457117 /* Parse.framework in Frameworks */,
+				77C951051A2FFC0000457117 /* Bolts.framework in Frameworks */,
+				77C951081A2FFC0000457117 /* ParseUI.framework in Frameworks */,
+				77C951071A2FFC0000457117 /* ParseFacebookUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +124,7 @@
 				777EA00B1A27C3F600100B31 /* MobileAssassin */,
 				777EA0281A27C3F600100B31 /* MobileAssassinTests */,
 				777EA00A1A27C3F600100B31 /* Products */,
+				77C951001A2FFBCB00457117 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +204,27 @@
 			name = UserCredentials;
 			sourceTree = "<group>";
 		};
+		77C951001A2FFBCB00457117 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77C951091A2FFC5100457117 /* AudioToolbox.framework */,
+				77C9510A1A2FFC5100457117 /* CFNetwork.framework */,
+				77C9510B1A2FFC5100457117 /* CoreGraphics.framework */,
+				77C9510C1A2FFC5100457117 /* CoreLocation.framework */,
+				77C9510D1A2FFC5100457117 /* libz.dylib */,
+				77C9510E1A2FFC5100457117 /* MobileCoreServices.framework */,
+				77C9510F1A2FFC5100457117 /* QuartzCore.framework */,
+				77C951101A2FFC5100457117 /* Security.framework */,
+				77C951111A2FFC5100457117 /* StoreKit.framework */,
+				77C951121A2FFC5100457117 /* SystemConfiguration.framework */,
+				77C951011A2FFC0000457117 /* Bolts.framework */,
+				77C951021A2FFC0000457117 /* Parse.framework */,
+				77C951031A2FFC0000457117 /* ParseFacebookUtils.framework */,
+				77C951041A2FFC0000457117 /* ParseUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -210,6 +274,7 @@
 				TargetAttributes = {
 					777EA0081A27C3F600100B31 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 35NU9VQ8XF;
 					};
 					777EA0241A27C3F600100B31 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -391,9 +456,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MobileAssassin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -401,9 +473,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MobileAssassin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -460,6 +539,7 @@
 				777EA0311A27C3F600100B31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		777EA0321A27C3F600100B31 /* Build configuration list for PBXNativeTarget "MobileAssassinTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +548,7 @@
 				777EA0341A27C3F600100B31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <Parse/Parse.h>
 @interface SignupViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *usernameText;
+@property (weak, nonatomic) IBOutlet UITextField *passwordText;
+@property (weak, nonatomic) IBOutlet UITextField *emailText;
 
+- (IBAction)signupPressed:(id)sender;
 @end

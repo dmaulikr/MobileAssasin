@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.hidesBackButton = TRUE;
+    self.passwordText.delegate = self;
     // Do any additional setup after loading the view.
 }
 
@@ -34,4 +36,33 @@
 }
 */
 
+
+
+- (IBAction)loginPressed:(id)sender {
+    NSString *username = [self.usernameText.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *password = [self.passwordText.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    if (username.length == 0 || password.length == 0) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Make sure to enter a username and password" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+        [alertView show];
+    }
+    else {
+        [PFUser logInWithUsernameInBackground:username password:password
+                                        block:^(PFUser *user, NSError *error) {
+                                            if (error) {
+                                                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry" message: [error.userInfo objectForKey:@"error"]delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                                                [alertView show];
+                                            }
+                                            else {
+                                                [self.navigationController popToRootViewControllerAnimated:YES];
+                                            }
+                                            
+                                        }];
+    }
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self loginPressed:self];
+    return YES;
+}
 @end

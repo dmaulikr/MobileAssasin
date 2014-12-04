@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <Parse/Parse.h>
 @interface CreateGameViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *lobbyNameText;
+@property (weak, nonatomic) IBOutlet UITextField *minPlayerText;
+@property (weak, nonatomic) IBOutlet UITextField *maxPlayerText;
 
+- (IBAction)createPressed:(id)sender;
 @end

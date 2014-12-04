@@ -17,6 +17,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+   }
+
+-(void)viewWillAppear:(BOOL)animated {
+    self.currentUser = [PFUser currentUser];
+    if (self.currentUser) {
+        if (![self.currentUser objectForKey:@"isPlaying"]) {
+            self.assassinateButton.hidden = YES;
+            self.separatorLabel.hidden = YES;
+            [self.gamesButton setTitle:@"Search for Lobby" forState:(UIControlStateNormal)];
+        }
+    } else {
+        [self performSegueWithIdentifier:@"showLogin" sender:self];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,4 +48,11 @@
 }
 */
 
+- (IBAction)logoutPressed:(id)sender {
+    [PFUser logOut];
+    [self performSegueWithIdentifier:@"showLogin" sender:self];
+}
+
+- (IBAction)createGamePressed:(id)sender {
+}
 @end

@@ -34,4 +34,33 @@
 }
 */
 
+- (IBAction)signupPressed:(UIButton *)sender {
+    NSString *username = [self.usernameText.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *password = [self.passwordText.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *email = [self.emailText.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    if (username.length == 0 || password.length == 0 || email.length == 0) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Make sure to enter a username, password and email adress" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+        [alertView show];
+    }
+    else {
+        PFUser *newUser = [PFUser user];
+        newUser.username = username;
+        newUser.password = password;
+        newUser.email = email;
+        newUser[@"isPlaying"] = [NSNumber numberWithBool:NO];
+        
+        [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (error) {
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry" message: [error.userInfo objectForKey:@"error"]delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                [alertView show];
+            }
+            else {
+                [self.navigationController popToRootViewControllerAnimated:YES];
+            }
+        }];
+    }
+    
+    
+}
 @end

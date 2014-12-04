@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.lobbyNameText becomeFirstResponder];
     // Do any additional setup after loading the view.
 }
 
@@ -34,4 +35,35 @@
 }
 */
 
+- (IBAction)createPressed:(id)sender {
+    NSString *lobbyName = [self.lobbyNameText.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    int minPlayer = [[self.minPlayerText.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] intValue];
+    int maxPlayer =[[self.maxPlayerText.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] intValue];
+    
+    
+    if (lobbyName.length != 0 || minPlayer > 1 || maxPlayer >= minPlayer) {
+        PFQuery *query = [PFQuery queryWithClassName:@"Lobby"];
+        [query whereKey:@"lobbyName" equalTo:lobbyName];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            
+            if (objects.count > 0) {
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Lobby name already exists!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                [alertView show];
+            }
+            else {
+        PFObject *lobby = [PFObject objectWithClassName:@"Lobby"];
+        lobby[@"lobbyName"] = lobbyName;
+        lobby[@"minPlayer"] = @(minPlayer);
+        lobby[@"maxPlayer"] = @(maxPlayer);
+        lobby[@"createdBy"] = [[PFUser currentUser]username];
+        lobby[@"isPrivate"] = [NSNumber numberWithBool:NO];
+        lobby[@"isFull"] = [NSNumber numberWithBool:NO];
+        PFRelation *lobbyUsers = [lobby relationForKey:@"lobbyUsers"];
+        [lobbyUsers addObject:[PFUser currentUser]];
+        [lobby saveInBackground];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+            }
+        }];
+    }
+}
 @end

@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface MainMenuViewController : UIViewController
+@property(strong,nonatomic) PFUser *currentUser;
+@property (weak, nonatomic) IBOutlet UIButton *gamesButton;
+@property (weak, nonatomic) IBOutlet UIButton *assassinateButton;
+@property (weak, nonatomic) IBOutlet UILabel *separatorLabel;
 
+
+- (IBAction)logoutPressed:(id)sender;
 @end
