@@ -14,12 +14,12 @@
 		777EA01D1A27C3F600100B31 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 777EA01C1A27C3F600100B31 /* Images.xcassets */; };
 		777EA0201A27C3F600100B31 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 777EA01E1A27C3F600100B31 /* LaunchScreen.xib */; };
 		777EA02C1A27C3F600100B31 /* MobileAssassinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA02B1A27C3F600100B31 /* MobileAssassinTests.m */; };
-		777EA0361A27CACB00100B31 /* Ninja-iPhone-5-Wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 777EA0351A27CACB00100B31 /* Ninja-iPhone-5-Wallpaper.jpg */; };
 		777EA03A1A2AABAC00100B31 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA0391A2AABAC00100B31 /* MainMenuViewController.m */; };
 		777EA03E1A2AAC1B00100B31 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA03D1A2AAC1B00100B31 /* LoginViewController.m */; };
 		777EA0431A2AAC3D00100B31 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA0421A2AAC3D00100B31 /* SignupViewController.m */; };
 		777EA0461A2AAC5300100B31 /* CreateGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA0451A2AAC5300100B31 /* CreateGameViewController.m */; };
 		777EA0491A2AAC6C00100B31 /* OpenGamesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA0481A2AAC6C00100B31 /* OpenGamesTableViewController.m */; };
+		779B16F41A310DC800EB9540 /* Ninja-iPhone-5-Wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 779B16F31A310DC800EB9540 /* Ninja-iPhone-5-Wallpaper.jpg */; };
 		77C951051A2FFC0000457117 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C951011A2FFC0000457117 /* Bolts.framework */; };
 		77C951061A2FFC0000457117 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C951021A2FFC0000457117 /* Parse.framework */; };
 		77C951071A2FFC0000457117 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C951031A2FFC0000457117 /* ParseFacebookUtils.framework */; };
@@ -59,7 +59,6 @@
 		777EA0251A27C3F600100B31 /* MobileAssassinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileAssassinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		777EA02A1A27C3F600100B31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		777EA02B1A27C3F600100B31 /* MobileAssassinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileAssassinTests.m; sourceTree = "<group>"; };
-		777EA0351A27CACB00100B31 /* Ninja-iPhone-5-Wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Ninja-iPhone-5-Wallpaper.jpg"; path = "../../../../Downloads/Ninja-iPhone-5-Wallpaper.jpg"; sourceTree = "<group>"; };
 		777EA0381A2AABAC00100B31 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
 		777EA0391A2AABAC00100B31 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 		777EA03C1A2AAC1B00100B31 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 		777EA0451A2AAC5300100B31 /* CreateGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateGameViewController.m; sourceTree = "<group>"; };
 		777EA0471A2AAC6C00100B31 /* OpenGamesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGamesTableViewController.h; sourceTree = "<group>"; };
 		777EA0481A2AAC6C00100B31 /* OpenGamesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGamesTableViewController.m; sourceTree = "<group>"; };
+		779B16F31A310DC800EB9540 /* Ninja-iPhone-5-Wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ninja-iPhone-5-Wallpaper.jpg"; sourceTree = "<group>"; };
 		77C951011A2FFC0000457117 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		77C951021A2FFC0000457117 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		77C951031A2FFC0000457117 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 		777EA00C1A27C3F600100B31 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				777EA0351A27CACB00100B31 /* Ninja-iPhone-5-Wallpaper.jpg */,
+				779B16F31A310DC800EB9540 /* Ninja-iPhone-5-Wallpaper.jpg */,
 				777EA00D1A27C3F600100B31 /* Info.plist */,
 				777EA00E1A27C3F600100B31 /* main.m */,
 			);
@@ -308,7 +308,7 @@
 			files = (
 				777EA01B1A27C3F600100B31 /* Main.storyboard in Resources */,
 				777EA0201A27C3F600100B31 /* LaunchScreen.xib in Resources */,
-				777EA0361A27CACB00100B31 /* Ninja-iPhone-5-Wallpaper.jpg in Resources */,
+				779B16F41A310DC800EB9540 /* Ninja-iPhone-5-Wallpaper.jpg in Resources */,
 				777EA01D1A27C3F600100B31 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
