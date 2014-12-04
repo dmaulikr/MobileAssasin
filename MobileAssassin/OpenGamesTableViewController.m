@@ -7,6 +7,7 @@
 //
 
 #import "OpenGamesTableViewController.h"
+#include "LobbyInfo.h"
 
 @interface OpenGamesTableViewController ()
 
@@ -22,6 +23,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,29 +32,30 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    NSLog(@"%s", "numberOfRowsInSection");
+    NSLog(@"%u", (unsigned int)[self.gamesArray count]);
+    return [self.gamesArray count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
     // Configure the cell...
+    NSLog(@"%s", "cellForRowAtIndexPath");
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GameListEntry"];
+    
+    LobbyInfo *entry = (self.gamesArray)[indexPath.row];
+    cell.textLabel.text = entry.lobbyName;
+    UIView *myView = [[UIView alloc] init];
+    //myView.backgroundColor = [UIColor redColor];
+    cell.backgroundView = myView;
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -87,14 +91,17 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    
 }
-*/
 
 @end

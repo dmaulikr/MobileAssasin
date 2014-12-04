@@ -7,12 +7,28 @@
 //
 
 #import "MainMenuViewController.h"
+#import "OpenGamesTableViewController.h"
+#import "LobbyInfo.h"
+#import  <Parse/Parse.h>
 
 @interface MainMenuViewController ()
+
+-(NSMutableArray*) _searchResults;
 
 @end
 
 @implementation MainMenuViewController
+
+// static array initialization
+-(NSMutableArray*) _searchResults
+{
+    static NSMutableArray* theArray = nil;
+    if (theArray == nil)
+    {
+        theArray = [[NSMutableArray alloc] init];
+    }
+    return theArray;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,7 +54,19 @@
     } else {
         [self performSegueWithIdentifier:@"showLogin" sender:self];
     }
+}
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSLog(@"Testing MainMenuViewController:viewDidAppear");
+    
+    unsigned long count = [self._searchResults count];
+    if(count != 0 )
+    {
+        [self._searchResults removeAllObjects];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,15 +74,46 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    NSLog(@"prepareForSegue: %@", segue.identifier);
+    if([segue.identifier isEqualToString:@"viewGamesSegue"])
+    {
+        NSLog(@"Testing viewGamesSegue");
+        
+        PFQuery *query = [PFQuery queryWithClassName:@"Lobby"];
+        [query whereKey:@"isFull" equalTo:[NSNumber numberWithBool:NO]];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *lobbyEntryArray, NSError *error) {
+            
+        unsigned long count = [lobbyEntryArray count];
+
+        for(int i = 0; i < count; i++)
+        {
+            LobbyInfo *entry = [[LobbyInfo alloc]init];
+            entry.lobbyName = lobbyEntryArray[i][@"lobbyName"];
+            entry.minNumOfPlayers = [[lobbyEntryArray[i] objectForKey:@"minPlayer"] intValue];
+            entry.maxNumOfPlayers = [[lobbyEntryArray[i] objectForKey:@"maxPlayer"] intValue];
+            
+            [[self _searchResults] addObject:entry];
+  
+            if ( i == count-1)
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    OpenGamesTableViewController *tableCtrlr = [segue destinationViewController];
+                    tableCtrlr.gamesArray = [self _searchResults];
+                    [tableCtrlr.tableView reloadData];
+                });
+            }
+        }];
+        
+    }
 }
-*/
 
 - (IBAction)logoutPressed:(id)sender {
     [PFUser logOut];
