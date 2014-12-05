@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <MultipeerConnectivity/MultipeerConnectivity.h>
 
-@interface MainMenuViewController : UIViewController
+
+@interface MainMenuViewController : UIViewController <MCBrowserViewControllerDelegate, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>
 @property(strong,nonatomic) PFUser *currentUser;
 @property (weak, nonatomic) IBOutlet UIButton *gamesButton;
 @property (weak, nonatomic) IBOutlet UIButton *assassinateButton;
 @property (weak, nonatomic) IBOutlet UILabel *separatorLabel;
 
-
+- (IBAction)assassinatePlayer:(id)sender;
 - (IBAction)logoutPressed:(id)sender;
 @end

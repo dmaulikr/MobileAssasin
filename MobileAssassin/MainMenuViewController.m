@@ -10,8 +10,14 @@
 #import "OpenGamesTableViewController.h"
 #import "LobbyInfo.h"
 #import  <Parse/Parse.h>
+#import "AppDelegate.h"
 
 @interface MainMenuViewController ()
+
+@property (nonatomic, strong) AppDelegate *appDelegate;
+@property (nonatomic, strong) NSMutableArray *arrConnectedDevices;
+-(void)peerDidChangeStateWithNotification:(NSNotification *)notification;
+
 
 -(NSMutableArray*) _searchResults;
 
@@ -33,7 +39,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [[_appDelegate peer] setupPeerAndSessionWithDisplayName:[UIDevice currentDevice].name];
+    [[_appDelegate peer] advertiseSelfInNetwork:YES];
+    //[_textName setDelegate:self];
+    
    }
+
+//delegate for assassinatePlayer button
+-(void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController{
+    [_appDelegate.peer.browser dismissViewControllerAnimated:YES completion:nil];
+}
+
+//delegate for assassinatePlayer button
+-(void)browserViewControllerWasCancelled:(MCBrowserViewController *)browserViewController{
+    [_appDelegate.peer.browser dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 -(void)viewWillAppear:(BOOL)animated {
     self.currentUser = [PFUser currentUser];
@@ -67,6 +89,13 @@
         [self._searchResults removeAllObjects];
     }
     
+}
+
+//to search for bluetooth devices
+- (IBAction)assassinatePlayer:(id)sender {
+    [[_appDelegate peer] setupMCBrowser];
+    [[[_appDelegate peer] browser] setDelegate:self];
+    [self presentViewController:[[_appDelegate peer] browser] animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
