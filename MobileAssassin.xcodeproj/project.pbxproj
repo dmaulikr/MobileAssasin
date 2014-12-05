@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D82941C1A311AF100D0DE5B /* LobbyInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D82941B1A311AF100D0DE5B /* LobbyInfo.m */; };
 		777EA00F1A27C3F600100B31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA00E1A27C3F600100B31 /* main.m */; };
 		777EA0121A27C3F600100B31 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA0111A27C3F600100B31 /* AppDelegate.m */; };
 		777EA0151A27C3F600100B31 /* MobileAssassin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 777EA0131A27C3F600100B31 /* MobileAssassin.xcdatamodeld */; };
@@ -47,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D82941A1A311AF100D0DE5B /* LobbyInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LobbyInfo.h; sourceTree = "<group>"; };
+		2D82941B1A311AF100D0DE5B /* LobbyInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LobbyInfo.m; sourceTree = "<group>"; };
 		777EA0091A27C3F600100B31 /* MobileAssassin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAssassin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		777EA00D1A27C3F600100B31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		777EA00E1A27C3F600100B31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -189,6 +192,8 @@
 				777EA0451A2AAC5300100B31 /* CreateGameViewController.m */,
 				777EA0471A2AAC6C00100B31 /* OpenGamesTableViewController.h */,
 				777EA0481A2AAC6C00100B31 /* OpenGamesTableViewController.m */,
+				2D82941A1A311AF100D0DE5B /* LobbyInfo.h */,
+				2D82941B1A311AF100D0DE5B /* LobbyInfo.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -334,6 +339,7 @@
 				777EA0491A2AAC6C00100B31 /* OpenGamesTableViewController.m in Sources */,
 				777EA0151A27C3F600100B31 /* MobileAssassin.xcdatamodeld in Sources */,
 				777EA0431A2AAC3D00100B31 /* SignupViewController.m in Sources */,
+				2D82941C1A311AF100D0DE5B /* LobbyInfo.m in Sources */,
 				777EA03A1A2AABAC00100B31 /* MainMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
