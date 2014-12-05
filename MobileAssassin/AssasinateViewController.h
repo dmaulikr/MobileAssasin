@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AssasinateViewController : UITableViewController
+@interface AssasinateViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UIButton *toBeAssasinatePlayerButton;
+@property (weak, nonatomic) IBOutlet NSString *toBeAssasinatedPlayer;
 
 @end

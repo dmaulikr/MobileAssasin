@@ -25,7 +25,7 @@
                                 </state>
                                 <connections>
                                     <action selector="assassinatePlayer:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bQm-5f-Y5e"/>
-                                    <segue destination="e4U-qT-H28" kind="push" id="t8Y-Kz-tnM"/>
+                                    <segue destination="e4U-qT-H28" kind="push" identifier="assasinateSegue" id="t8Y-Kz-tnM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jNK-xl-n00">
@@ -371,10 +371,20 @@
                                     <navigationItem title="Assasinate this Guy" id="VvU-hk-U7h"/>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8n1-NI-RDD">
+                                <rect key="frame" x="129" y="240" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="gNp-nk-cwM"/>
+                    <connections>
+                        <outlet property="toBeAssasinatePlayerButton" destination="8n1-NI-RDD" id="KKM-DF-W3d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0lm-Le-YwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

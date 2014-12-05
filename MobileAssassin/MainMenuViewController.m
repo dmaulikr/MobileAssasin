@@ -11,13 +11,13 @@
 #import "LobbyInfo.h"
 #import  <Parse/Parse.h>
 #import "AppDelegate.h"
+#import "AssasinateViewController.h"
 
 @interface MainMenuViewController ()
 
 @property (nonatomic, strong) AppDelegate *appDelegate;
 @property (nonatomic, strong) NSMutableArray *arrConnectedDevices;
--(void)peerDidChangeStateWithNotification:(NSNotification *)notification;
-
+-(void)browserViewControllerWasCancelled:(MCBrowserViewController *)browserViewController;
 
 -(NSMutableArray*) _searchResults;
 
@@ -38,13 +38,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
     _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    //here we have to set Player name instead of device name
     [[_appDelegate peer] setupPeerAndSessionWithDisplayName:[UIDevice currentDevice].name];
     [[_appDelegate peer] advertiseSelfInNetwork:YES];
-    //[_textName setDelegate:self];
     
    }
+
+
+// Peer lost, when player go out of range
+- (void)browser:(MCNearbyServiceBrowser *)browser lostPeer:(MCPeerID *)peerID {
+    NSLog(@"Session Manager lost peer: %@", peerID);
+    
+}
 
 //delegate for assassinatePlayer button
 -(void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController{
@@ -63,7 +71,9 @@
     if (self.currentUser) {
            BOOL isPlaying = [[self.currentUser objectForKey:@"isPlaying"] boolValue];
         NSLog(isPlaying ? @"Yes" : @"No");
-        if (!isPlaying) {
+        //changing for testing
+        //if (!isPlaying) {
+        if (isPlaying) {
             NSLog(@"Entering the if isplaying");
             self.assassinateButton.hidden = YES;
             self.separatorLabel.hidden = YES;
@@ -95,9 +105,12 @@
 - (IBAction)assassinatePlayer:(id)sender {
     [[_appDelegate peer] setupMCBrowser];
     [[[_appDelegate peer] browser] setDelegate:self];
+    
     [self presentViewController:[[_appDelegate peer] browser] animated:YES completion:nil];
+    
 }
 
+     
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -142,6 +155,7 @@
         }];
         
     }
+    
 }
 
 - (IBAction)logoutPressed:(id)sender {

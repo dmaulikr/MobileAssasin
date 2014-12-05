@@ -9,12 +9,18 @@
 #import <Foundation/Foundation.h>
 #import <MultipeerConnectivity/MultipeerConnectivity.h>
 
-@interface Peer : NSObject <MCSessionDelegate>
+@interface Peer : NSObject
 
 @property (nonatomic, strong) MCSession *session;
 @property (nonatomic, strong) MCBrowserViewController *browser;
 @property (nonatomic, strong) MCAdvertiserAssistant *advertiseAssistant;
 @property (nonatomic, strong) MCPeerID *peer;
+
+@property (nonatomic, strong) MCNearbyServiceAdvertiser *serviceAdvertiser;
+@property (nonatomic, strong) MCNearbyServiceBrowser *nearbyServiceBrowser;
+
+//@property (weak, nonatomic) IBOutlet NSString *toBeAssasinatedPlayer;
+
 
 -(void)advertiseSelfInNetwork:(BOOL)shouldAdvertise;
 -(void)setupMCBrowser;
