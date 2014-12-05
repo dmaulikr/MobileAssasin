@@ -2,7 +2,7 @@
 =============
 > Team project developed for CMPE277 (Fall 2014) at San Jose State University
 
- - Team Elite project
+ - Team 'Elite' project
  - Title: Mobile Assasin
 
 ##Description
@@ -14,7 +14,7 @@ A player has options like login/logout to application, create a game, join a gam
 
 ##Basic Configuration
 --------------
-To play the game or run this application, Apple phone required with iOS version above 8.0.
+* To play the game or run this application, Apple phone required with iOS version above 8.0.
 
 
 ##Directory information:
@@ -25,11 +25,11 @@ To play the game or run this application, Apple phone required with iOS version 
 
 ##Tools being used
 --------------
-XCode - Developing the code
-Parse Cloud Database - Storing the user information like profile, game details, logged in time.
+* XCode - Developing the code
+* Parse Cloud Database - Storing the user information like profile, game details, logged in time.
 
 ##Team Memebrs
 --------------
-Enrique Padilla 
-Harleen Kaur
-Swetha Rathna kempahanumaiah 
+* Enrique Padilla 
+* Harleen Kaur
+* Swetha Rathna kempahanumaiah 
