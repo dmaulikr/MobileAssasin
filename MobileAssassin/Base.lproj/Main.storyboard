@@ -23,6 +23,10 @@
                                 <state key="normal" title="Assasinate!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="assassinatePlayer:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bQm-5f-Y5e"/>
+                                    <segue destination="e4U-qT-H28" kind="push" id="t8Y-Kz-tnM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jNK-xl-n00">
                                 <rect key="frame" x="82" y="266" width="157" height="36"/>
@@ -128,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3b-py-Z9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="2190"/>
+            <point key="canvasLocation" x="308" y="2446"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="fZq-ba-GHn">
@@ -350,7 +354,31 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qSR-AG-l0o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="687" y="1441"/>
+            <point key="canvasLocation" x="955" y="1385"/>
+        </scene>
+        <!--Assasinate View Controller-->
+        <scene sceneID="LOH-BS-cVl">
+            <objects>
+                <viewController id="e4U-qT-H28" customClass="AssasinateViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ghQ-OC-DaE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" id="n1J-xm-fXq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Assasinate this Guy" id="VvU-hk-U7h"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gNp-nk-cwM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0lm-Le-YwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="1804"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fgj-3m-fOI">
