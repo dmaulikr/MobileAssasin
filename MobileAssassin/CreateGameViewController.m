@@ -58,6 +58,8 @@
         lobby[@"createdBy"] = [[PFUser currentUser]username];
         lobby[@"isPrivate"] = [NSNumber numberWithBool:NO];
         lobby[@"isFull"] = [NSNumber numberWithBool:NO];
+                [[PFUser currentUser] setObject:[NSNumber numberWithBool:YES] forKey:@"isPlaying" ];
+                [[PFUser currentUser] saveInBackground];
         PFRelation *lobbyUsers = [lobby relationForKey:@"lobbyUsers"];
         [lobbyUsers addObject:[PFUser currentUser]];
         [lobby saveInBackground];

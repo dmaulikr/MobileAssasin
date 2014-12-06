@@ -61,9 +61,9 @@
     self.currentUser = [PFUser currentUser];
     NSLog(self.currentUser.username);
     if (self.currentUser) {
-           BOOL isPlaying = [[self.currentUser objectForKey:@"isPlaying"] boolValue];
-        NSLog(isPlaying ? @"Yes" : @"No");
-        if (!isPlaying) {
+           self.isPlaying = [[self.currentUser objectForKey:@"isPlaying"] boolValue];
+        NSLog(self.isPlaying ? @"Yes" : @"No");
+        if (!self.isPlaying) {
             NSLog(@"Entering the if isplaying");
             self.assassinateButton.hidden = YES;
             self.separatorLabel.hidden = YES;
@@ -149,6 +149,19 @@
     [self performSegueWithIdentifier:@"showLogin" sender:self];
 }
 
-- (IBAction)createGamePressed:(id)sender {
+- (IBAction)createTargetPressed:(id)sender {
+     NSLog(self.isPlaying ? @"Yes" : @"No");
+    NSLog(@"Create Target Pressed");
+    if (!self.isPlaying) {
+        NSLog(@"Pressed create game");
+        [self performSegueWithIdentifier:@"showCreateGame" sender:self];
+    }
+        else {
+            
+            [self performSegueWithIdentifier:@"showTarget" sender:self];
+        }
+
 }
+
+
 @end
