@@ -340,7 +340,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="IeH-fX-U8q" kind="push" identifier="lobbyDetailSegue" id="rMe-Ax-Z7I"/>
+                                    <segue destination="IeH-fX-U8q" kind="push" identifier="lobbyDetailSegue" id="MRk-od-RmB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -386,7 +386,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G6N-ge-qJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1266" y="1460"/>
+            <point key="canvasLocation" x="1376" y="1432"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fgj-3m-fOI">

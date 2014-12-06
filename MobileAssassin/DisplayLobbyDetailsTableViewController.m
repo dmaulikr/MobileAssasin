@@ -40,6 +40,7 @@
     return leftNavButton;
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -48,10 +49,10 @@
     
     self.currentUser = [PFUser currentUser];
     NSLog(@"%@", self.currentUser.username);
-    if (self.currentUser)
+    if (!self.currentUser)
         self.navigationItem.rightBarButtonItem = self.rightNavButton;
     
-    self.navigationItem.leftBarButtonItem = leftNavButton;
+    self.navigationItem.leftBarButtonItem = self.leftNavButton;
     
     self.title = _lobbyName;
    
@@ -92,6 +93,7 @@
         [query whereKey:@"lobbyName" equalTo:_lobbyName];
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             
+                
                 PFUser *player = [PFUser user];
                 player.username = currentUser.username;
                 player.password = currentUser.password;
