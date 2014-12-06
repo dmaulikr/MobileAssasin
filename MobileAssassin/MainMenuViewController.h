@@ -14,7 +14,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *gamesButton;
 @property (weak, nonatomic) IBOutlet UIButton *assassinateButton;
 @property (weak, nonatomic) IBOutlet UILabel *separatorLabel;
+@property (nonatomic) BOOL isPlaying;
 
 
 - (IBAction)logoutPressed:(id)sender;
+- (IBAction)createTargetPressed:(id)sender;
 @end

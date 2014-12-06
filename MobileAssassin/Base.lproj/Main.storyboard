@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Rmc-B4-XwF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Rmc-B4-XwF">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--Main Menu-->
@@ -54,8 +54,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="createGamePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ND6-06-dQR"/>
-                                    <segue destination="Jdd-gd-yGc" kind="push" identifier="showCreateGame" id="L9s-v8-aOh"/>
+                                    <action selector="createTargetPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vqx-S1-jbc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_______________________________" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5M7-zi-guT">
@@ -80,6 +79,8 @@
                         <outlet property="gamesButton" destination="jNK-xl-n00" id="esQ-xl-6bk"/>
                         <outlet property="separatorLabel" destination="5M7-zi-guT" id="RV4-2g-vfd"/>
                         <segue destination="X7C-JM-qHK" kind="push" identifier="showLogin" id="Ow5-Ry-02w"/>
+                        <segue destination="vpK-uM-WTp" kind="push" identifier="showTarget" id="Qg9-0B-gZQ"/>
+                        <segue destination="Jdd-gd-yGc" kind="push" identifier="showCreateGame" id="ZLd-Qg-y98"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -128,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3b-py-Z9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="2190"/>
+            <point key="canvasLocation" x="80" y="2222"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="fZq-ba-GHn">
@@ -350,7 +351,35 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qSR-AG-l0o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="687" y="1441"/>
+            <point key="canvasLocation" x="1029" y="1419"/>
+        </scene>
+        <!--Target Description-->
+        <scene sceneID="pRM-B6-whB">
+            <objects>
+                <viewController id="vpK-uM-WTp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jtI-Rd-NQJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="rPC-P4-7mE">
+                                <rect key="frame" x="0.0" y="110" width="320" height="458"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attempting to Assassinate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9cJ-JZ-VwV">
+                                <rect key="frame" x="59" y="76" width="202" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Target Description" id="63l-q5-cQm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tf0-5m-kW0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="994" y="2177"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fgj-3m-fOI">
