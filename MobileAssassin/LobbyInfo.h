@@ -11,8 +11,10 @@
 @interface LobbyInfo : NSObject
 
 @property (nonatomic, copy) NSString *lobbyName;
+@property (nonatomic, strong) NSMutableArray *currentplayers;
 @property (nonatomic, assign) int minNumOfPlayers;
 @property (nonatomic, assign) int maxNumOfPlayers;
 @property (nonatomic, assign) Boolean isFull;
+@property (nonatomic, assign) Boolean isPrivate;
 
 @end

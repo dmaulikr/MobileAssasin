@@ -10,6 +10,7 @@
 
 @interface OpenGamesTableViewController : UITableViewController
 
-@property (nonatomic, strong) NSMutableArray *gamesArray;
+@property (nonatomic, strong) NSMutableArray *lobbyArray;
+
 
 @end

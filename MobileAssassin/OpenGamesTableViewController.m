@@ -7,6 +7,7 @@
 //
 
 #import "OpenGamesTableViewController.h"
+#import "DisplayLobbyDetailsTableViewController.h"
 #include "LobbyInfo.h"
 
 @interface OpenGamesTableViewController ()
@@ -35,8 +36,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
     NSLog(@"%s", "numberOfRowsInSection");
-    NSLog(@"%u", (unsigned int)[self.gamesArray count]);
-    return [self.gamesArray count];
+    NSLog(@"%u", (unsigned int)[self.lobbyArray count]);
+    return [self.lobbyArray count];
 }
 
 
@@ -47,7 +48,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GameListEntry"];
     
-    LobbyInfo *entry = (self.gamesArray)[indexPath.row];
+    LobbyInfo *entry = (self.lobbyArray)[indexPath.row];
     cell.textLabel.text = entry.lobbyName;
     UIView *myView = [[UIView alloc] init];
     //myView.backgroundColor = [UIColor redColor];
@@ -96,11 +97,24 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+   
+    NSLog(@"prepareForSegue: %@", segue.identifier);
     
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([segue.identifier isEqualToString:@"lobbyDetailSegue"])
+    {
+        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+        LobbyInfo *lobbyToSend = [self.lobbyArray objectAtIndex:path.row];
+        
+        NSLog(@"Testing segue- lobbyDetailSegue %@", lobbyToSend.lobbyName);
+        
+        DisplayLobbyDetailsTableViewController *details = [segue destinationViewController];
+        details.lobbyName = lobbyToSend.lobbyName;
+        details.currentPlayers = lobbyToSend.currentplayers;
+        NSLog(@"lobbyDetailSegue - details.currentPlayers count %lu", [details.currentPlayers count]);
+
+        [details.tableView reloadData];
+        
+    }
     
 }
 

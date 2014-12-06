@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D82941C1A311AF100D0DE5B /* LobbyInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D82941B1A311AF100D0DE5B /* LobbyInfo.m */; };
+		2D82941F1A312D5B00D0DE5B /* DisplayLobbyDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D82941E1A312D5B00D0DE5B /* DisplayLobbyDetailsTableViewController.m */; };
 		777EA00F1A27C3F600100B31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA00E1A27C3F600100B31 /* main.m */; };
 		777EA0121A27C3F600100B31 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA0111A27C3F600100B31 /* AppDelegate.m */; };
 		777EA0151A27C3F600100B31 /* MobileAssassin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 777EA0131A27C3F600100B31 /* MobileAssassin.xcdatamodeld */; };
@@ -50,6 +51,8 @@
 /* Begin PBXFileReference section */
 		2D82941A1A311AF100D0DE5B /* LobbyInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LobbyInfo.h; sourceTree = "<group>"; };
 		2D82941B1A311AF100D0DE5B /* LobbyInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LobbyInfo.m; sourceTree = "<group>"; };
+		2D82941D1A312D5B00D0DE5B /* DisplayLobbyDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayLobbyDetailsTableViewController.h; sourceTree = "<group>"; };
+		2D82941E1A312D5B00D0DE5B /* DisplayLobbyDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayLobbyDetailsTableViewController.m; sourceTree = "<group>"; };
 		777EA0091A27C3F600100B31 /* MobileAssassin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAssassin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		777EA00D1A27C3F600100B31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		777EA00E1A27C3F600100B31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				777EA0101A27C3F600100B31 /* AppDelegate.h */,
 				777EA0111A27C3F600100B31 /* AppDelegate.m */,
 				777EA0191A27C3F600100B31 /* Main.storyboard */,
+				2D82941D1A312D5B00D0DE5B /* DisplayLobbyDetailsTableViewController.h */,
+				2D82941E1A312D5B00D0DE5B /* DisplayLobbyDetailsTableViewController.m */,
 				777EA0371A2AAB8500100B31 /* Controllers */,
 				777EA01C1A27C3F600100B31 /* Images.xcassets */,
 				777EA01E1A27C3F600100B31 /* LaunchScreen.xib */,
@@ -340,6 +345,7 @@
 				777EA0151A27C3F600100B31 /* MobileAssassin.xcdatamodeld in Sources */,
 				777EA0431A2AAC3D00100B31 /* SignupViewController.m in Sources */,
 				2D82941C1A311AF100D0DE5B /* LobbyInfo.m in Sources */,
+				2D82941F1A312D5B00D0DE5B /* DisplayLobbyDetailsTableViewController.m in Sources */,
 				777EA03A1A2AABAC00100B31 /* MainMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,6 +14,7 @@
 @interface MainMenuViewController ()
 
 -(NSMutableArray*) _searchResults;
+-(NSMutableArray*) _lobbyPlayers;
 
 @end
 
@@ -30,6 +31,16 @@
     return theArray;
 }
 
+-(NSMutableArray*) _lobbyPlayers
+{
+    static NSMutableArray* theArray = nil;
+    if (theArray == nil)
+    {
+        theArray = [[NSMutableArray alloc] init];
+    }
+    return theArray;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -37,7 +48,7 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     self.currentUser = [PFUser currentUser];
-    NSLog(self.currentUser.username);
+    NSLog(@"%@", self.currentUser.username);
     if (self.currentUser) {
            BOOL isPlaying = [[self.currentUser objectForKey:@"isPlaying"] boolValue];
         NSLog(isPlaying ? @"Yes" : @"No");
@@ -54,6 +65,18 @@
     } else {
         [self performSegueWithIdentifier:@"showLogin" sender:self];
     }
+    
+    unsigned long count = [self._searchResults count];
+    if(count != 0 )
+    {
+        [self._searchResults removeAllObjects];
+    }
+    
+    unsigned long count1 = [self._lobbyPlayers count];
+    if(count1 != 0 )
+    {
+        [self._lobbyPlayers removeAllObjects];
+    }
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -65,6 +88,12 @@
     if(count != 0 )
     {
         [self._searchResults removeAllObjects];
+    }
+    
+    unsigned long count1= [self._lobbyPlayers count];
+    if(count1 != 0 )
+    {
+        [self._lobbyPlayers removeAllObjects];
     }
     
 }
@@ -92,27 +121,67 @@
         [query findObjectsInBackgroundWithBlock:^(NSArray *lobbyEntryArray, NSError *error) {
             
         unsigned long count = [lobbyEntryArray count];
+        NSLog(@"viewGamesSegue - lobby Array Count =%lu", count);
 
         for(int i = 0; i < count; i++)
         {
-            LobbyInfo *entry = [[LobbyInfo alloc]init];
-            entry.lobbyName = lobbyEntryArray[i][@"lobbyName"];
-            entry.minNumOfPlayers = [[lobbyEntryArray[i] objectForKey:@"minPlayer"] intValue];
-            entry.maxNumOfPlayers = [[lobbyEntryArray[i] objectForKey:@"maxPlayer"] intValue];
-            
-            [[self _searchResults] addObject:entry];
-  
-            if ( i == count-1)
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    
-                    OpenGamesTableViewController *tableCtrlr = [segue destinationViewController];
-                    tableCtrlr.gamesArray = [self _searchResults];
-                    [tableCtrlr.tableView reloadData];
-                });
-            }
-        }];
+            //Get the players list for the given lobby
+            PFRelation *relation = [lobbyEntryArray[i] relationForKey:@"lobbyUsers"];
+            [[relation query] findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+               if (error) {
+                    // There was an error
+                }
+               else {
+                      LobbyInfo *entry = [[LobbyInfo alloc]init];
+                      entry.lobbyName = lobbyEntryArray[i][@"lobbyName"];
+                      unsigned long userCount = [objects count];
+                      NSLog(@"viewGamesSegue - userCount =%lu", userCount);
+                   
+                      for (int j = 0; j < userCount ; j++)
+                      {
+                        NSString *username = [[NSString alloc] init];
+                        username = [objects[j] objectForKey:@"username" ];
+                        [self._lobbyPlayers  addObject:username ];
+                      } //end of for
+                   
+                   entry.currentplayers = self._lobbyPlayers;
+                   NSLog(@"viewGamesSegue - userCount after loop =%lu", [entry.currentplayers count]);
+                                                                         
+                    entry.minNumOfPlayers = [[lobbyEntryArray[i] objectForKey:@"minPlayer"] intValue];
+                    entry.maxNumOfPlayers = [[lobbyEntryArray[i] objectForKey:@"maxPlayer"] intValue];
+                   //entry.isPrivate = [[lobbyEntryArray[i] objectForKey:@"isPrivate"] boolValue];
+                   //entry.currentplayers = lobbyEntryArray[i][@"lobbyUsers"];
+                   entry.isFull = NO;
+                
+                   NSLog(@"**********************");
+                   NSLog(@"viewGamesSegue - userCount =%lu", userCount);
+                   NSLog(@"entry.lobbyName %@", entry.lobbyName);
+                   NSLog(@"entry.minPlayer %d", entry.minNumOfPlayers);
+                   NSLog(@"entry.maxPlayer %d", entry.maxNumOfPlayers);
+                   NSLog(@"entry.isFull %d", entry.isFull);
+                   NSLog(@"entry.lobbyName %@", entry.lobbyName);
+                   NSLog(@"entry.userCount %lu", [entry.currentplayers count]);
+                   
+                   [self._searchResults addObject:entry];
+                   NSLog(@"self.searchResult count%lu", [self._searchResults count]);
+                   NSLog(@"**********************");
+
+                   if ( i == count-1)
+                       dispatch_async(dispatch_get_main_queue(), ^{
+                           
+                           NSLog(@"Invoking Open games list tableCntlr");
+                           OpenGamesTableViewController *tableCtrlr = [segue destinationViewController];
+                           tableCtrlr.lobbyArray = self._searchResults;
+                           [tableCtrlr.tableView reloadData];
+                       });
+                   
+               } // end of else
+             
+            }]; // end of relation query
+        } //end of for
+    }];
         
-    }
+  }
 }
 
 - (IBAction)logoutPressed:(id)sender {
