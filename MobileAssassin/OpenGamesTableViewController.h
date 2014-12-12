@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface OpenGamesTableViewController : UITableViewController
 
-@property (nonatomic, strong) NSMutableArray *gamesArray;
+@property (nonatomic, strong) NSArray *lobbies;
+
 
 @end

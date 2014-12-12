@@ -55,10 +55,16 @@
         lobby[@"lobbyName"] = lobbyName;
         lobby[@"minPlayer"] = @(minPlayer);
         lobby[@"maxPlayer"] = @(maxPlayer);
+        lobby[@"currentPlayer"] = [NSNumber numberWithInt:1];
         lobby[@"createdBy"] = [[PFUser currentUser]username];
         lobby[@"isPrivate"] = [NSNumber numberWithBool:NO];
         lobby[@"isFull"] = [NSNumber numberWithBool:NO];
-        PFRelation *lobbyUsers = [lobby relationForKey:@"lobbyUsers"];
+        PFQuery *query = [[PFQuery alloc] initWithClassName:@"TargetList"];
+        [query whereKey:@"assassinName" equalTo:[[PFUser currentUser]username]];
+                PFObject *targetList = [query getFirstObject];
+                targetList[@"isPlaying"] = [NSNumber numberWithBool:YES];
+                [targetList saveInBackground];
+                PFRelation *lobbyUsers = [lobby relationForKey:@"lobbyUsers"];
         [lobbyUsers addObject:[PFUser currentUser]];
         [lobby saveInBackground];
         [self.navigationController popToRootViewControllerAnimated:YES];

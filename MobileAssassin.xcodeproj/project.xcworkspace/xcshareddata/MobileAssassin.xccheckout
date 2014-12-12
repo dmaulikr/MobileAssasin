@@ -10,15 +10,19 @@
 	<string>MobileAssassin</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>10597CCDF55B740A4AFF5389CF819FE9E2AAD5E1</key>
+		<string>https://github.com/mtbsickrider/MobileAssassin.git</string>
 		<key>CC9BE357CC6A7C4C73949F3AD9CEE55154850902</key>
 		<string>https://github.com/iamharleen/MobileAssasin.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MobileAssassin.xcodeproj</string>
+	<string>MobileAssasin/MobileAssassin.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>10597CCDF55B740A4AFF5389CF819FE9E2AAD5E1</key>
+		<string>../../../../MobileAssassin</string>
 		<key>CC9BE357CC6A7C4C73949F3AD9CEE55154850902</key>
-		<string>../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/iamharleen/MobileAssasin.git</string>
@@ -34,7 +38,15 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>CC9BE357CC6A7C4C73949F3AD9CEE55154850902</string>
 			<key>IDESourceControlWCCName</key>
-			<string>MobileAssasin</string>
+			<string>MobileAssasin_BluetoothVersion%20ver%202</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>10597CCDF55B740A4AFF5389CF819FE9E2AAD5E1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MobileAssassin</string>
 		</dict>
 	</array>
 </dict>

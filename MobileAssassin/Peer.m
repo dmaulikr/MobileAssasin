@@ -11,6 +11,12 @@
 #import "MainMenuViewController.h"
 #import "AssasinateViewController.h"
 
+@interface Peer ()
+
+@property (nonatomic, strong) AppDelegate *appDelegate;
+
+@end
+
 @implementation Peer
 
 -(id)init{
@@ -33,18 +39,35 @@
     _session = [[MCSession alloc] initWithPeer:_peer];
     _session.delegate = self;
     
+    _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+
+    //At start device not found so setting value to NO
+    _toBeAssasinatedPlayerFlag = [NSString stringWithFormat:@"NO"];
 }
 
 - (void)browser:(MCNearbyServiceBrowser *)browser foundPeer:(MCPeerID *)peerID withDiscoveryInfo:(NSDictionary *)info {
     
     NSLog(@"Session Manager found peer: %@", peerID);
-
+    
+    
+    
+    
     //dismissing the middle view controller/searching for other devices
     [_browser dismissViewControllerAnimated:YES completion:nil];
 
-    AssasinateViewController *assasinateViewController = [[AssasinateViewController alloc] initWithNibName:@"AssasinateViewController" bundle:nil];
-    assasinateViewController.toBeAssasinatedPlayer = [NSString stringWithString:peerID.displayName];
-    //setting the value to local variable
+    //comparison needs to be done between found device and Target device
+    _peerNameDefine = peerID.displayName;
+    NSLog(@"%@", _peerNameDefine);
+    NSLog(@"%@" ,  [[PFUser currentUser][@"targetName"] stringByTrimmingCharactersInSet:
+                    [NSCharacterSet whitespaceCharacterSet]]);
+    if([_peerNameDefine isEqualToString:_targetPlayer]) {
+        NSLog(@"Killed");
+    _toBeAssasinatedPlayerFlag = [NSString stringWithFormat:@"YES"];
+    _toBeAssasinatedPlayer = [NSString stringWithString:peerID.displayName];
+        NSLog(@"%@ and %@ " , _toBeAssasinatedPlayerFlag , _toBeAssasinatedPlayer);
+        return;
+    }
+
 }
 
 

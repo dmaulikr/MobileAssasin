@@ -7,8 +7,7 @@
 //
 
 #import "OpenGamesTableViewController.h"
-#include "LobbyInfo.h"
-
+#import "LobbyViewController.h"
 @interface OpenGamesTableViewController ()
 
 @end
@@ -17,13 +16,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"Testing viewGamesSegue");
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    UIView* bview = [[UIView alloc] init];
+    bview.backgroundColor = [UIColor lightGrayColor];
+    [self.tableView setBackgroundView:bview];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    PFQuery *query = [PFQuery queryWithClassName:@"Lobby"];
+    [query whereKey:@"isFull" equalTo:[NSNumber numberWithBool:NO]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *lobbies, NSError *error) {
+        NSLog(@"viewGamesSegue - lobby Array Count =%d", [lobbies count]);
+        self.lobbies = lobbies;
+        NSLog(@"%@" , [self.lobbies objectAtIndex:0][@"lobbyName"]);
+        [self.tableView reloadData];
+    }];
     
 }
 
@@ -34,9 +41,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    NSLog(@"%s", "numberOfRowsInSection");
-    NSLog(@"%u", (unsigned int)[self.gamesArray count]);
-    return [self.gamesArray count];
+    return [self.lobbies count];
 }
 
 
@@ -44,17 +49,17 @@
     
     // Configure the cell...
     NSLog(@"%s", "cellForRowAtIndexPath");
+    NSLog(@"%d" , indexPath.row);
+       UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Lobby" forIndexPath:indexPath];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GameListEntry"];
-    
-    LobbyInfo *entry = (self.gamesArray)[indexPath.row];
-    cell.textLabel.text = entry.lobbyName;
-    UIView *myView = [[UIView alloc] init];
-    //myView.backgroundColor = [UIColor redColor];
-    cell.backgroundView = myView;
+    PFObject *lobby = [self.lobbies objectAtIndex:indexPath.row];
+    NSLog(@"%@" , lobby[@"lobbyName"]);
+    cell.textLabel.text = lobby[@"lobbyName"];
     
     return cell;
 }
+
+
 
 
 /*
@@ -96,11 +101,13 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([sender isKindOfClass:[UITableViewCell class]])  {
+        if ([segue.destinationViewController isKindOfClass:[LobbyViewController class]]) {
+            LobbyViewController *destController = segue.destinationViewController;
+            NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+            destController.lobby = [self.lobbies objectAtIndex:indexPath.row];
+        }
+    }
     
 }
 

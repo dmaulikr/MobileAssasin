@@ -12,13 +12,23 @@
 
 
 @interface MainMenuViewController : UIViewController
-
 @property(strong,nonatomic) PFUser *currentUser;
+@property (nonatomic) BOOL isPlaying;
 @property (weak, nonatomic) IBOutlet UIButton *gamesButton;
 @property (weak, nonatomic) IBOutlet UIButton *assassinateButton;
 @property (weak, nonatomic) IBOutlet UILabel *separatorLabel;
+@property (weak, nonatomic) IBOutlet UIButton *createGameViewTargetButton;
+@property (strong,nonatomic) PFObject *lobby;
+@property (weak, nonatomic) IBOutlet UILabel *labelText;
+@property (weak, nonatomic) IBOutlet UIButton *refreshButton;
 
 
-- (IBAction)assassinatePlayer:(id)sender;
+
 - (IBAction)logoutPressed:(id)sender;
+- (IBAction)createGameViewTargetButtonPressed:(id)sender;
+- (IBAction)assassinatePressed:(id)sender;
+//- (IBAction)assassinatePlayer:(id)sender;
+- (IBAction)refreshButtonPressed:(id)sender;
+
+
 @end
