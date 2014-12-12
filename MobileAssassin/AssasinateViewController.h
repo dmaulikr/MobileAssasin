@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AssasinateViewController : UITableViewController
+@interface AssasinateViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UIButton *toBeAssasinatePlayerButton;
+@property (weak, nonatomic) IBOutlet UILabel *labelTargetInRange;
+@property (weak, nonatomic) IBOutlet UILabel *labelTargetNotInRange;
+
+- (IBAction)assassinateButtonPressed:(id)sender;
 
 @end
