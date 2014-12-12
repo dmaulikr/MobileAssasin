@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D82941C1A311AF100D0DE5B /* LobbyInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D82941B1A311AF100D0DE5B /* LobbyInfo.m */; };
-		5BE9EC281A313A0F00B9D546 /* AssasinateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9EC271A313A0F00B9D546 /* AssasinateViewController.m */; };
-		5BE9EC2B1A313FD500B9D546 /* Peer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9EC2A1A313FD500B9D546 /* Peer.m */; };
+		2D9C561E1A3A799B0015225F /* ViewTargetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C561D1A3A799B0015225F /* ViewTargetViewController.m */; };
+		5BB5DF1B1A377B1D005F0FF2 /* AssasinateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB5DF181A377B1D005F0FF2 /* AssasinateViewController.m */; };
+		5BB5DF1C1A377B1D005F0FF2 /* Peer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB5DF1A1A377B1D005F0FF2 /* Peer.m */; };
+		772FD4501A342DEA0023554D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 772FD44F1A342DEA0023554D /* MBProgressHUD.m */; };
+		7732B5EE1A33E4D6002CFDEF /* LobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7732B5ED1A33E4D6002CFDEF /* LobbyViewController.m */; };
+		773783021A3A89B2007FBF64 /* ninjadojo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 773783011A3A89B2007FBF64 /* ninjadojo.jpg */; };
 		777EA00F1A27C3F600100B31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA00E1A27C3F600100B31 /* main.m */; };
 		777EA0121A27C3F600100B31 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA0111A27C3F600100B31 /* AppDelegate.m */; };
 		777EA0151A27C3F600100B31 /* MobileAssassin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 777EA0131A27C3F600100B31 /* MobileAssassin.xcdatamodeld */; };
@@ -23,6 +26,9 @@
 		777EA0461A2AAC5300100B31 /* CreateGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA0451A2AAC5300100B31 /* CreateGameViewController.m */; };
 		777EA0491A2AAC6C00100B31 /* OpenGamesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777EA0481A2AAC6C00100B31 /* OpenGamesTableViewController.m */; };
 		779B16F41A310DC800EB9540 /* Ninja-iPhone-5-Wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 779B16F31A310DC800EB9540 /* Ninja-iPhone-5-Wallpaper.jpg */; };
+		77A2C54F1A35591F006A6EF9 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A2C54E1A35591F006A6EF9 /* CoreBluetooth.framework */; };
+		77A2C5511A355936006A6EF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A2C5501A355936006A6EF9 /* Foundation.framework */; };
+		77A2C5531A355947006A6EF9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A2C5521A355947006A6EF9 /* UIKit.framework */; };
 		77C951051A2FFC0000457117 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C951011A2FFC0000457117 /* Bolts.framework */; };
 		77C951061A2FFC0000457117 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C951021A2FFC0000457117 /* Parse.framework */; };
 		77C951071A2FFC0000457117 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C951031A2FFC0000457117 /* ParseFacebookUtils.framework */; };
@@ -50,12 +56,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2D82941A1A311AF100D0DE5B /* LobbyInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LobbyInfo.h; sourceTree = "<group>"; };
-		2D82941B1A311AF100D0DE5B /* LobbyInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LobbyInfo.m; sourceTree = "<group>"; };
-		5BE9EC261A313A0F00B9D546 /* AssasinateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssasinateViewController.h; sourceTree = "<group>"; };
-		5BE9EC271A313A0F00B9D546 /* AssasinateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssasinateViewController.m; sourceTree = "<group>"; };
-		5BE9EC291A313FD500B9D546 /* Peer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Peer.h; sourceTree = "<group>"; };
-		5BE9EC2A1A313FD500B9D546 /* Peer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Peer.m; sourceTree = "<group>"; };
+		2D9C561C1A3A799B0015225F /* ViewTargetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewTargetViewController.h; sourceTree = "<group>"; };
+		2D9C561D1A3A799B0015225F /* ViewTargetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewTargetViewController.m; sourceTree = "<group>"; };
+		5BB5DF171A377B1D005F0FF2 /* AssasinateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssasinateViewController.h; sourceTree = "<group>"; };
+		5BB5DF181A377B1D005F0FF2 /* AssasinateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssasinateViewController.m; sourceTree = "<group>"; };
+		5BB5DF191A377B1D005F0FF2 /* Peer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Peer.h; sourceTree = "<group>"; };
+		5BB5DF1A1A377B1D005F0FF2 /* Peer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Peer.m; sourceTree = "<group>"; };
+		772FD44E1A342DEA0023554D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		772FD44F1A342DEA0023554D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		7732B5EC1A33E4D6002CFDEF /* LobbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LobbyViewController.h; sourceTree = "<group>"; };
+		7732B5ED1A33E4D6002CFDEF /* LobbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LobbyViewController.m; sourceTree = "<group>"; };
+		773783011A3A89B2007FBF64 /* ninjadojo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ninjadojo.jpg; sourceTree = "<group>"; };
 		777EA0091A27C3F600100B31 /* MobileAssassin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAssassin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		777EA00D1A27C3F600100B31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		777EA00E1A27C3F600100B31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -79,6 +90,9 @@
 		777EA0471A2AAC6C00100B31 /* OpenGamesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGamesTableViewController.h; sourceTree = "<group>"; };
 		777EA0481A2AAC6C00100B31 /* OpenGamesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGamesTableViewController.m; sourceTree = "<group>"; };
 		779B16F31A310DC800EB9540 /* Ninja-iPhone-5-Wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ninja-iPhone-5-Wallpaper.jpg"; sourceTree = "<group>"; };
+		77A2C54E1A35591F006A6EF9 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		77A2C5501A355936006A6EF9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		77A2C5521A355947006A6EF9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		77C951011A2FFC0000457117 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		77C951021A2FFC0000457117 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		77C951031A2FFC0000457117 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
@@ -100,6 +114,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77A2C5531A355947006A6EF9 /* UIKit.framework in Frameworks */,
+				77A2C5511A355936006A6EF9 /* Foundation.framework in Frameworks */,
+				77A2C54F1A35591F006A6EF9 /* CoreBluetooth.framework in Frameworks */,
 				77C951131A2FFC5100457117 /* AudioToolbox.framework in Frameworks */,
 				77C951141A2FFC5100457117 /* CFNetwork.framework in Frameworks */,
 				77C951151A2FFC5100457117 /* CoreGraphics.framework in Frameworks */,
@@ -149,11 +166,9 @@
 		777EA00B1A27C3F600100B31 /* MobileAssassin */ = {
 			isa = PBXGroup;
 			children = (
-				777EA0101A27C3F600100B31 /* AppDelegate.h */,
-				5BE9EC291A313FD500B9D546 /* Peer.h */,
-				5BE9EC2A1A313FD500B9D546 /* Peer.m */,
-				777EA0111A27C3F600100B31 /* AppDelegate.m */,
 				777EA0191A27C3F600100B31 /* Main.storyboard */,
+				777EA0101A27C3F600100B31 /* AppDelegate.h */,
+				777EA0111A27C3F600100B31 /* AppDelegate.m */,
 				777EA0371A2AAB8500100B31 /* Controllers */,
 				777EA01C1A27C3F600100B31 /* Images.xcassets */,
 				777EA01E1A27C3F600100B31 /* LaunchScreen.xib */,
@@ -166,6 +181,11 @@
 		777EA00C1A27C3F600100B31 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5BB5DF191A377B1D005F0FF2 /* Peer.h */,
+				5BB5DF1A1A377B1D005F0FF2 /* Peer.m */,
+				773783011A3A89B2007FBF64 /* ninjadojo.jpg */,
+				772FD44E1A342DEA0023554D /* MBProgressHUD.h */,
+				772FD44F1A342DEA0023554D /* MBProgressHUD.m */,
 				779B16F31A310DC800EB9540 /* Ninja-iPhone-5-Wallpaper.jpg */,
 				777EA00D1A27C3F600100B31 /* Info.plist */,
 				777EA00E1A27C3F600100B31 /* main.m */,
@@ -194,16 +214,18 @@
 			isa = PBXGroup;
 			children = (
 				777EA03B1A2AAC0600100B31 /* UserCredentials */,
+				5BB5DF171A377B1D005F0FF2 /* AssasinateViewController.h */,
+				5BB5DF181A377B1D005F0FF2 /* AssasinateViewController.m */,
 				777EA0381A2AABAC00100B31 /* MainMenuViewController.h */,
 				777EA0391A2AABAC00100B31 /* MainMenuViewController.m */,
 				777EA0441A2AAC5300100B31 /* CreateGameViewController.h */,
 				777EA0451A2AAC5300100B31 /* CreateGameViewController.m */,
 				777EA0471A2AAC6C00100B31 /* OpenGamesTableViewController.h */,
 				777EA0481A2AAC6C00100B31 /* OpenGamesTableViewController.m */,
-				2D82941A1A311AF100D0DE5B /* LobbyInfo.h */,
-				2D82941B1A311AF100D0DE5B /* LobbyInfo.m */,
-				5BE9EC261A313A0F00B9D546 /* AssasinateViewController.h */,
-				5BE9EC271A313A0F00B9D546 /* AssasinateViewController.m */,
+				7732B5EC1A33E4D6002CFDEF /* LobbyViewController.h */,
+				7732B5ED1A33E4D6002CFDEF /* LobbyViewController.m */,
+				2D9C561C1A3A799B0015225F /* ViewTargetViewController.h */,
+				2D9C561D1A3A799B0015225F /* ViewTargetViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -222,6 +244,9 @@
 		77C951001A2FFBCB00457117 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				77A2C5521A355947006A6EF9 /* UIKit.framework */,
+				77A2C5501A355936006A6EF9 /* Foundation.framework */,
+				77A2C54E1A35591F006A6EF9 /* CoreBluetooth.framework */,
 				77C951091A2FFC5100457117 /* AudioToolbox.framework */,
 				77C9510A1A2FFC5100457117 /* CFNetwork.framework */,
 				77C9510B1A2FFC5100457117 /* CoreGraphics.framework */,
@@ -323,6 +348,7 @@
 			files = (
 				777EA01B1A27C3F600100B31 /* Main.storyboard in Resources */,
 				777EA0201A27C3F600100B31 /* LaunchScreen.xib in Resources */,
+				773783021A3A89B2007FBF64 /* ninjadojo.jpg in Resources */,
 				779B16F41A310DC800EB9540 /* Ninja-iPhone-5-Wallpaper.jpg in Resources */,
 				777EA01D1A27C3F600100B31 /* Images.xcassets in Resources */,
 			);
@@ -344,14 +370,16 @@
 			files = (
 				777EA0121A27C3F600100B31 /* AppDelegate.m in Sources */,
 				777EA00F1A27C3F600100B31 /* main.m in Sources */,
-				5BE9EC281A313A0F00B9D546 /* AssasinateViewController.m in Sources */,
 				777EA0461A2AAC5300100B31 /* CreateGameViewController.m in Sources */,
 				777EA03E1A2AAC1B00100B31 /* LoginViewController.m in Sources */,
+				2D9C561E1A3A799B0015225F /* ViewTargetViewController.m in Sources */,
 				777EA0491A2AAC6C00100B31 /* OpenGamesTableViewController.m in Sources */,
+				5BB5DF1C1A377B1D005F0FF2 /* Peer.m in Sources */,
+				7732B5EE1A33E4D6002CFDEF /* LobbyViewController.m in Sources */,
 				777EA0151A27C3F600100B31 /* MobileAssassin.xcdatamodeld in Sources */,
+				772FD4501A342DEA0023554D /* MBProgressHUD.m in Sources */,
+				5BB5DF1B1A377B1D005F0FF2 /* AssasinateViewController.m in Sources */,
 				777EA0431A2AAC3D00100B31 /* SignupViewController.m in Sources */,
-				2D82941C1A311AF100D0DE5B /* LobbyInfo.m in Sources */,
-				5BE9EC2B1A313FD500B9D546 /* Peer.m in Sources */,
 				777EA03A1A2AABAC00100B31 /* MainMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +509,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = MobileAssassin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -498,6 +527,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = MobileAssassin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

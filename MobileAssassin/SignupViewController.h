@@ -8,10 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-@interface SignupViewController : UIViewController
+
+@interface SignupViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
 @property (weak, nonatomic) IBOutlet UITextField *usernameText;
 @property (weak, nonatomic) IBOutlet UITextField *passwordText;
 @property (weak, nonatomic) IBOutlet UITextField *emailText;
 
+@property (strong,nonatomic) UIImagePickerController *imagePicker;
+@property (strong,nonatomic) UIImage *image;
+@property (weak, nonatomic) IBOutlet UILabel *selfieStatus;
+
 - (IBAction)signupPressed:(id)sender;
+- (IBAction)selfieButtonPressed:(id)sender;
+
 @end
