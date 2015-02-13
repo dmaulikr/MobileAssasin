@@ -28,7 +28,7 @@ A player has options like login/logout to application, create a game, join a gam
 * XCode - Developing the code
 * Parse Cloud Database - Storing the user information like profile, game details, logged in time.
 
-##Team Memebrs
+##Team Members
 --------------
 * Enrique Padilla 
 * Harleen Kaur
