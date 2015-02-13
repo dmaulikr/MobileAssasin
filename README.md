@@ -35,7 +35,9 @@ A player has options like login/logout to application, create a game, join a gam
 * Swetha Rathna kempahanumaiah 
 
 
-
+## High Level Architecture
 ![](https://github.com/iamharleen/MobileAssasin/blob/master/MobileAssassin/assets/highlevel.png)
+
+##Game Screenshots
 ![](https://github.com/iamharleen/MobileAssasin/blob/master/MobileAssassin/assets/main.PNG)
 ![](https://github.com/iamharleen/MobileAssasin/blob/master/MobileAssassin/assets/lobby.PNG)
