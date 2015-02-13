@@ -38,4 +38,4 @@ A player has options like login/logout to application, create a game, join a gam
 
 ![](https://github.com/iamharleen/MobileAssasin/blob/master/MobileAssassin/assets/highlevel.png)
 ![](https://github.com/iamharleen/MobileAssasin/blob/master/MobileAssassin/assets/main.PNG)
-![](https://github.com/iamharleen/MobileAssasin/blob/master/MobileAssassin/assets/main.PNG)
+![](https://github.com/iamharleen/MobileAssasin/blob/master/MobileAssassin/assets/lobby.PNG)
