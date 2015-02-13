@@ -33,3 +33,5 @@ A player has options like login/logout to application, create a game, join a gam
 * Enrique Padilla 
 * Harleen Kaur
 * Swetha Rathna kempahanumaiah 
+* 
+![](https://github.com/iamharleen/MobileAssasin/blob/master/MobileAssassin/ninjadojo.jpg)
